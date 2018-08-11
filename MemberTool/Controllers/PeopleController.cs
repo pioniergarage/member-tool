@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web.Http;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MemberTool.Models;
@@ -26,7 +23,9 @@ namespace MemberTool.Controllers.Api
         [Microsoft.AspNetCore.Mvc.HttpGet]
         public IEnumerable<Person> GetPersons()
         {
-            return _context.Persons.IncludeAll();
+            return _context.Persons
+                .Where(p => !p.Deleted)
+                .IncludeAll();
         }
 
         // GET: api/People/5

@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using MemberTool.Models;
 using MemberTool.Models.Entities;
 using Microsoft.AspNetCore.Builder;
