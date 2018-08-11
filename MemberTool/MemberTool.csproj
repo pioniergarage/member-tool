@@ -8,7 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
+    <PackageReference Include="Microsoft.Azure.Mobile.Server" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Azure.Mobile.Server.Entity" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Azure.Mobile.Server.Tables" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="3.0.0" />
   </ItemGroup>
 
   <ItemGroup>
