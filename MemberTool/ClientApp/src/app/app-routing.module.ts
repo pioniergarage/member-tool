@@ -1,16 +1,10 @@
-import {RouterModule, Routes} from '@angular/router';
-import {NgModule} from '@angular/core';
-import {CardGridComponent} from './card-grid/card-grid.component';
-import {CardCarouselComponent} from './card-carousel/card-carousel.component';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
-const appRoutes: Routes = [
-  { path: '', redirectTo: '/grid', pathMatch: 'full' },
-  { path: 'grid', component: CardGridComponent },
-  { path: 'carousel', component: CardCarouselComponent }
-];
+const routes: Routes = [];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
