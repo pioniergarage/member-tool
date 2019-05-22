@@ -19,7 +19,7 @@
     "userImgPath": "https://pioniergarage.de/wp-content/uploads/PG-Team-40-1.jpg",
     "backgroundImgPath": "https://images.pexels.com/photos/73871/rocket-launch-rocket-take-off-nasa-73871.jpeg",
     "email": "gustav.gans@pioniergarage.de",
-    "description": "Das ist der liebe Gustav. Den ham alle lieb",
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gub",
     "linkedIn": null,
     "answers": [
       {
@@ -31,13 +31,14 @@
         "id": "109"
       }
     ],
-    "id": "77"
+    "id": "77",
+    "status": "active"
   },
   {
     "name": "Gustav Gans",
     "currentPGRole": {
-      "name": "Head of Sales",
-      "id": "23"
+      "name": "Alumnus",
+      "id": "100"
     },
     "pgRoles": [
       {
@@ -47,14 +48,18 @@
       {
         "name": "Sales Member",
         "id": "17"
+      },
+      {
+        "name": "Alumnus",
+        "id": "100"
       }
     ],
     "memberSince": "2016-04-12T12:14:37.014Z",
     "userImgPath": "https://pioniergarage.de/wp-content/uploads/PG-Team-40-1.jpg",
-    "backgroundImgPath": "https://images.pexels.com/photos/73871/rocket-launch-rocket-take-off-nasa-73871.jpeg",
+    "backgroundImgPath": "https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg",
     "email": "gustav.gans@pioniergarage.de",
     "description": "Das ist der liebe Gustav. Den ham alle lieb",
-    "linkedIn": null,
+    "linkedIn": "http://example.org",
     "answers": [
       {
         "question": {
@@ -65,6 +70,7 @@
         "id": "109"
       }
     ],
-    "id": "77"
+    "id": "77",
+    "status": "inactive"
   }
 ]

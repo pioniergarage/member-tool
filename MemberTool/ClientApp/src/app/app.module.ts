@@ -8,17 +8,21 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { PersonGridComponent } from './person-grid/person-grid.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PersonService } from './shared/services/person.service';
+import { FormsModule } from '@angular/forms';
+import { PersonFilterPipe } from './shared/pipes/personFilter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    PersonGridComponent
+    PersonGridComponent,
+    PersonFilterPipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [PersonService],

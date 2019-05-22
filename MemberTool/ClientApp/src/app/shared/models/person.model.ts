@@ -9,7 +9,7 @@ export interface Person {
   userImgPath: string;
   backgroundImgPath: string;
   pgRoles: PGRole[];
-  mail: string;
+  email: string;
   description: string;
   linkedIn: string;
 }
