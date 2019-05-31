@@ -137,6 +137,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_services_person_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./shared/services/person.service */ "./src/app/shared/services/person.service.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _shared_pipes_personFilter_pipe__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./shared/pipes/personFilter.pipe */ "./src/app/shared/pipes/personFilter.pipe.ts");
+/* harmony import */ var ngx_materialize__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ngx-materialize */ "./node_modules/ngx-materialize/fesm5/ngx-materialize.js");
+
 
 
 
@@ -165,7 +167,8 @@ var AppModule = /** @class */ (function () {
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_8__["HttpClientModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormsModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"]
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
+                ngx_materialize__WEBPACK_IMPORTED_MODULE_12__["MzChipModule"]
             ],
             providers: [_shared_services_person_service__WEBPACK_IMPORTED_MODULE_9__["PersonService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -185,7 +188,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"margin-bottom: 10px\" class=\"row\">\n  <form class=\"col s12\">\n    <input\n      [(ngModel)]=\"searchInput\"\n      name=\"search_input\"\n      id=\"search_input\"\n      placeholder=\"Search ...\"\n      type=\"text\"\n      class=\"validate\"\n    />\n  </form>\n</div>\n\n<div class=\"row\">\n  <div *ngIf=\"persons | personFilterPipe: searchInput; let filteredPersons\">\n    <div *ngFor=\"let person of filteredPersons\" class=\"col s12 m6 l4\">\n      <div class=\"card hoverable pg-card\" [ngStyle]=\"getPersonStatus(person)\">\n        <div class=\"card-image pg-card-image\">\n          <img [src]=\"person.backgroundImgPath\" />\n          <a\n            #openingElement\n            class=\"btn-floating halfway-fab pg-red pg-btn hoverable activator\"\n          >\n            <i class=\"material-icons\">more_vert</i>\n          </a>\n        </div>\n        <div class=\"user-image\">\n          <img [src]=\"person.userImgPath\" alt=\"header-1\" />\n        </div>\n        <div class=\"card-content\">\n          <span class=\"card-title center-align\">{{ person.name }}</span>\n          <span class=\"card-sub-title center-align grey-text\">{{\n            person.currentPGRole.name\n          }}</span>\n          <!-- <blockquote class=\"pg-red-blockquote blockquote-lighten-2\">\n            {{ person.description | slice: 0:140 }}\n          </blockquote> -->\n        </div>\n        <div #cardReveal class=\"card-reveal\">\n          <span #closingElement class=\"card-title grey-text text-darken-4\">\n            {{ person.name }}\n            <i class=\"material-icons right\">close</i>\n          </span>\n          <ul>\n            <li class=\"pg-card-subheading\">\n              <i class=\"material-icons\">today</i>Mitglied seit\n            </li>\n            <li class=\"pg-card-content\">\n              {{ person.memberSince | date: \"LL / yyyy\" }}\n            </li>\n            <li class=\"list-separator\"></li>\n            <li class=\"pg-card-subheading\">\n              <i class=\"material-icons\">supervisor_account</i>Bisherige\n              Positionen in der PG\n            </li>\n            <li class=\"pg-card-content\">\n              <ul class=\"card-reveal-list\">\n                <li *ngFor=\"let role of person.pgRoles\">{{ role.name }}</li>\n              </ul>\n            </li>\n            <li class=\"list-separator\"></li>\n            <a\n              *ngIf=\"person.email\"\n              [href]=\"'mailto:' + person.email\"\n              target=\"_blank\"\n            >\n              <li style=\"color: rgba(0,0,0,0.87);\" class=\"pg-card-subheading\">\n                <i class=\"material-icons\">mail</i>Mail\n              </li>\n            </a>\n            <a *ngIf=\"person.linkedIn\" [href]=\"person.linkedIn\" target=\"_blank\">\n              <li style=\"color: rgba(0,0,0,0.87);\" class=\"pg-card-subheading\">\n                <i class=\"material-icons\">account_box</i>LinkedIn\n              </li>\n            </a>\n          </ul>\n        </div>\n      </div>\n    </div>\n    <div\n      *ngIf=\"filteredPersons.length === 0\"\n      class=\"col s12 m12 center-align grey-text text-darken-1\"\n      style=\"padding-top: 50px\"\n    >\n      <i class=\"large material-icons\">highlight_off</i>\n      <h4>something went wrong</h4>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div style=\"margin-bottom: 10px\" class=\"row\">\n  <form class=\"col s12\">\n    <div class=\"row\">\n      <div class=\"col s12\">\n        <mz-chip-input\n          [placeholder]=\"'Search ...'\"\n          [secondaryPlaceholder]=\"' + Tag'\"\n          [(ngModel)]=\"searchChips\"\n          name=\"searchInput\"\n          (add)=\"onChipsAdded($event)\"\n          (delete)=\"onChipsDeleted($event)\"\n        >\n        </mz-chip-input>\n      </div>\n    </div>\n  </form>\n</div>\n\n<div class=\"row\">\n  <div *ngIf=\"persons | personFilterPipe: searchChips; let filteredPersons\">\n    <div *ngFor=\"let person of filteredPersons\" class=\"col s12 m6 l4\">\n      <div class=\"card hoverable pg-card\" [ngStyle]=\"getPersonStatus(person)\">\n        <div class=\"card-image pg-card-image\">\n          <img [src]=\"person.backgroundImgPath\" />\n          <a\n            #openingElement\n            class=\"btn-floating halfway-fab pg-red pg-btn hoverable activator\"\n          >\n            <i class=\"material-icons\">more_vert</i>\n          </a>\n        </div>\n        <div class=\"user-image\">\n          <img [src]=\"person.userImgPath\" alt=\"header-1\" />\n        </div>\n        <div class=\"card-content\">\n          <span class=\"card-title center-align\">{{ person.name }}</span>\n          <span class=\"card-sub-title center-align grey-text\">{{\n            person.currentPGRole.name\n          }}</span>\n          <!-- <blockquote class=\"pg-red-blockquote blockquote-lighten-2\">\n            {{ person.description | slice: 0:140 }}\n          </blockquote> -->\n        </div>\n        <div #cardReveal class=\"card-reveal\">\n          <span #closingElement class=\"card-title grey-text text-darken-4\">\n            {{ person.name }}\n            <i class=\"material-icons right\">close</i>\n          </span>\n          <ul>\n            <li class=\"pg-card-subheading\">\n              <i class=\"material-icons\">today</i>Mitglied seit\n            </li>\n            <li class=\"pg-card-content\">\n              {{ person.memberSince }}\n            </li>\n            <li class=\"list-separator\"></li>\n            <li class=\"pg-card-subheading\">\n              <i class=\"material-icons\">supervisor_account</i>Bisherige\n              Positionen in der PG\n            </li>\n            <li class=\"pg-card-content\">\n              <ul class=\"card-reveal-list\">\n                <li *ngFor=\"let role of person.pgRoles\">{{ role.name }}</li>\n              </ul>\n            </li>\n            <li class=\"list-separator\"></li>\n            <a\n              *ngIf=\"person.email\"\n              [href]=\"'mailto:' + person.email\"\n              target=\"_blank\"\n            >\n              <li style=\"color: rgba(0,0,0,0.87);\" class=\"pg-card-subheading\">\n                <i class=\"material-icons\">mail</i>Mail\n              </li>\n            </a>\n            <a *ngIf=\"person.linkedIn\" [href]=\"person.linkedIn\" target=\"_blank\">\n              <li style=\"color: rgba(0,0,0,0.87);\" class=\"pg-card-subheading\">\n                <i class=\"material-icons\">account_box</i>LinkedIn\n              </li>\n            </a>\n          </ul>\n        </div>\n      </div>\n    </div>\n    <div\n      *ngIf=\"filteredPersons.length === 0\"\n      class=\"col s12 m12 center-align grey-text text-darken-1\"\n      style=\"padding-top: 50px\"\n    >\n      <i class=\"large material-icons\">highlight_off</i>\n      <h4>something went wrong</h4>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -217,20 +220,22 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var PersonGridComponent = /** @class */ (function () {
-    function PersonGridComponent(memberService) {
+    function PersonGridComponent(memberService, changeDetectorRef) {
         this.memberService = memberService;
-        // person filter
-        this.searchInput = '';
+        this.changeDetectorRef = changeDetectorRef;
         // all persons
         this.persons = [];
         // subscription
         this.subscriptions = [];
+        // search input chips array
+        this.searchChips = [];
     }
     PersonGridComponent.prototype.ngOnInit = function () {
         var _this = this;
         // subscribe to persons
         this.subscriptions.push(this.memberService.getPersons().subscribe(function (persons) {
-            console.log(persons);
+            // debug
+            // console.log(persons)
             _this.persons = persons;
         }, function (error) {
             console.log(error);
@@ -240,6 +245,7 @@ var PersonGridComponent = /** @class */ (function () {
         // unsubscribe all subscriptions
         this.subscriptions.forEach(function (sub) { return sub.unsubscribe(); });
     };
+    // ToDo delete for new design
     PersonGridComponent.prototype.getPersonStatus = function (person) {
         // opacity value
         var opacity = 0.7;
@@ -250,13 +256,21 @@ var PersonGridComponent = /** @class */ (function () {
             };
         }
     };
+    PersonGridComponent.prototype.onChipsAdded = function (event) {
+        // run change detector
+        this.changeDetectorRef.detectChanges();
+    };
+    PersonGridComponent.prototype.onChipsDeleted = function (event) {
+        // run change detector
+        this.changeDetectorRef.detectChanges();
+    };
     PersonGridComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-person-grid',
             template: __webpack_require__(/*! ./person-grid.component.html */ "./src/app/person-grid/person-grid.component.html"),
             styles: [__webpack_require__(/*! ./person-grid.component.scss */ "./src/app/person-grid/person-grid.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_services_person_service__WEBPACK_IMPORTED_MODULE_2__["PersonService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_services_person_service__WEBPACK_IMPORTED_MODULE_2__["PersonService"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]])
     ], PersonGridComponent);
     return PersonGridComponent;
 }());
@@ -389,17 +403,115 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PersonFilterPipe", function() { return PersonFilterPipe; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var fuse_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! fuse.js */ "./node_modules/fuse.js/dist/fuse.js");
+/* harmony import */ var fuse_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(fuse_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_3__);
 
 
+
+
+// import { intersectionWith } from 'lodash/intersectionWith'; // ToDo: minimize imported files
 var PersonFilterPipe = /** @class */ (function () {
     function PersonFilterPipe() {
     }
-    PersonFilterPipe.prototype.transform = function (value, searchInput) {
-        return value.filter(function (person) {
-            // return person.name.toLowerCase().trim().includes(searchInput.toLowerCase().trim());
-            return JSON.stringify(Object.values(person)).toLowerCase().trim().includes(searchInput.toLowerCase().trim());
-            // ToDo search in each property of a person
-        });
+    PersonFilterPipe.prototype.transform = function (value, searchChips) {
+        // if no search tags are choosen return the whole person array
+        if (searchChips.length === 0 || searchChips === undefined) {
+            return value;
+        }
+        // search keys
+        var searchKeys = [];
+        // prepare search keys
+        if (value[0]) {
+            // get all keys of an person object
+            searchKeys = Object.keys(value[0]);
+            // do not search in id
+            if (searchKeys.includes('id')) {
+                // get id of id
+                var id = searchKeys.indexOf('id');
+                // delete id
+                searchKeys = (id > -1) ? searchKeys.slice(0, id).concat(searchKeys.slice(id + 1)) : searchKeys;
+            }
+            // search in name of currentPGRole
+            if (searchKeys.includes('currentPGRole')) {
+                // get id of currentPGRole
+                var id = searchKeys.indexOf('currentPGRole');
+                searchKeys[id] = 'currentPGRole.name';
+            }
+            // search in pg-roles array
+            if (searchKeys.includes('pgRoles')) {
+                // get id of pgRoles
+                var id = searchKeys.indexOf('pgRoles');
+                searchKeys[id] = 'pgRoles.name';
+            }
+        }
+        else {
+            throw new Error('no data to search in');
+        }
+        // https://fusejs.io/
+        // use fuse.js for searching
+        var options = {
+            shouldSort: true,
+            includeScore: true,
+            // includeMatches: true, // for debugging
+            tokenize: true,
+            matchAllTokens: true,
+            minMatchCharLength: 3,
+            keys: searchKeys
+        };
+        var fuse = new fuse_js__WEBPACK_IMPORTED_MODULE_2__(value, options);
+        // array of search results
+        var resultArray = [];
+        // search for all tags
+        return searchChips.reduce(function (accumulator, currentValue, currentIndex) {
+            // search for one tag
+            var results = fuse.search(currentValue.tag);
+            // bug: return type of search() is Person althrough scoring is activated
+            // see https://github.com/krisk/Fuse/issues/265
+            // handle first tag
+            if (currentIndex === 0) {
+                return results;
+            }
+            else {
+                if (currentIndex === 1) {
+                    // score counter is used to calc the mean propability of all matches
+                    // set score counter to 1 for each person
+                    accumulator.forEach(function (person) { return person.scoreCounter = 1; });
+                }
+                // compute intersection of arrays accumulator and results
+                var intersectedArray = Object(lodash__WEBPACK_IMPORTED_MODULE_3__["intersectionWith"])(accumulator, results, function (person1, person2) {
+                    // persons are equal
+                    // @ts-ignore
+                    if (person1.item.id === person2.item.id) {
+                        // sum both scores
+                        // @ts-ignore
+                        person1.score = person1.score + person2.score;
+                        // @ts-ignore
+                        person2.score = person1.score + person2.score;
+                        // increae score counter
+                        person1.scoreCounter++;
+                        // @ts-ignore
+                        person2.scoreCounter++;
+                        return true;
+                    }
+                    return false;
+                });
+                return intersectedArray;
+            }
+        }, resultArray)
+            .map(function (person) {
+            // calc search probability
+            if (person.scoreCounter && person.scoreCounter > 1) {
+                person.score = person.score / person.scoreCounter;
+            }
+            return person;
+        })
+            .sort(function (person1, person2) {
+            // sort ascending
+            return person1.score - person2.score;
+        })
+            .map(function (person) { return person = person.item; }); // delete score and score counter
     };
     PersonFilterPipe = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({
@@ -427,6 +539,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+
 
 
 
@@ -438,7 +552,22 @@ var PersonService = /** @class */ (function () {
         this.API_URL = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].peopleApiUrl;
     }
     PersonService.prototype.getPersons = function () {
-        return this.http.get('assets/people.json');
+        return this.http.get('assets/people.json')
+            .pipe(
+        // modify date format
+        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (persons) {
+            return persons.map(function (person) {
+                // create new date
+                var date = new Date(person.memberSince);
+                // format date
+                var options = { month: '2-digit', year: 'numeric' };
+                // execute format options and add whitespace e.g. '04 / 2018'
+                var dateString = date.toLocaleDateString('default', options).replace('/', ' / ');
+                // update person property
+                person.memberSince = dateString;
+                return person;
+            });
+        }));
     };
     PersonService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])(),
