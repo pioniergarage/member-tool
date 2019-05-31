@@ -1,20 +1,6 @@
 <div style="margin-bottom: 10px" class="row">
   <form class="col s12">
     <div class="row">
-      <div class="input-field col s12">
-        <i class="material-icons prefix">search</i>
-        <!-- <input
-          [(ngModel)]="searchInput"
-          name="search_input"
-          id="search_input"
-          placeholder="Search ..."
-          type="text"
-          class="validate"
-        /> -->
-      </div>
-    </div>
-
-    <div class="row">
       <div class="col s12">
         <mz-chip-input
           [placeholder]="'Search ...'"
@@ -31,13 +17,7 @@
 </div>
 
 <div class="row">
-  <!-- <div *ngIf="persons | personFilterPipe: searchInput; let filteredPersons"> -->
-  <div
-    *ngIf="
-      persons | personFilterPipe: searchChips:searchInputChangeIndicator;
-      let filteredPersons
-    "
-  >
+  <div *ngIf="persons | personFilterPipe: searchChips; let filteredPersons">
     <div *ngFor="let person of filteredPersons" class="col s12 m6 l4">
       <div class="card hoverable pg-card" [ngStyle]="getPersonStatus(person)">
         <div class="card-image pg-card-image">

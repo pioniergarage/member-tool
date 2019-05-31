@@ -10,9 +10,6 @@ import { Subscription } from 'rxjs';
 })
 export class PersonGridComponent implements OnInit, OnDestroy {
 
-  // person filter
-  public searchInput: string = '';
-
   // all persons
   persons: Person[] = [];
 
@@ -31,7 +28,6 @@ export class PersonGridComponent implements OnInit, OnDestroy {
 
         // debug
         // console.log(persons)
-
         this.persons = persons;
       },
         (error) => {
@@ -45,6 +41,7 @@ export class PersonGridComponent implements OnInit, OnDestroy {
     this.subscriptions.forEach(sub => sub.unsubscribe());
   }
 
+  // ToDo delete for new design
   getPersonStatus(person: Person) {
 
     // opacity value
