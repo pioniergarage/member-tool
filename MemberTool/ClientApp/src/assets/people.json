@@ -35,7 +35,7 @@
     "status": "active"
   },
   {
-    "name": "Gustav Gans",
+    "name": "Dominic Seitz",
     "currentPGRole": {
       "name": "Alumnus",
       "id": "100"
@@ -52,6 +52,10 @@
       {
         "name": "Alumnus",
         "id": "100"
+      },
+      {
+        "name": "Launchpad Member",
+        "id": "110"
       }
     ],
     "memberSince": "2016-04-12T12:14:37.014Z",
@@ -70,7 +74,7 @@
         "id": "109"
       }
     ],
-    "id": "77",
+    "id": "78",
     "status": "inactive"
   }
 ]

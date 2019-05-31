@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PersonService } from './shared/services/person.service';
 import { FormsModule } from '@angular/forms';
 import { PersonFilterPipe } from './shared/pipes/personFilter.pipe';
+import { MzChipModule } from 'ngx-materialize';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PersonFilterPipe } from './shared/pipes/personFilter.pipe';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MzChipModule
   ],
   providers: [PersonService],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit, ViewChild, ElementRef, ChangeDetectorRef } from '@angular/core';
 import { PersonService } from '../shared/services/person.service';
 import { Person } from '../shared/models/person.model';
 import { Subscription } from 'rxjs';
@@ -19,13 +19,19 @@ export class PersonGridComponent implements OnInit, OnDestroy {
   // subscription
   private subscriptions: Subscription[] = [];
 
-  constructor(private memberService: PersonService) { }
+  // search input chips array
+  public searchChips: Materialize.ChipDataObject[] = [];
+
+  constructor(private memberService: PersonService, private changeDetectorRef: ChangeDetectorRef) { }
 
   ngOnInit() {
     // subscribe to persons
     this.subscriptions.push(
       this.memberService.getPersons().subscribe((persons: Person[]) => {
-        console.log(persons)
+
+        // debug
+        // console.log(persons)
+
         this.persons = persons;
       },
         (error) => {
@@ -50,5 +56,15 @@ export class PersonGridComponent implements OnInit, OnDestroy {
         filter: `opacity(${opacity})`
       };
     }
+  }
+
+  onChipsAdded(event) {
+    // run change detector
+    this.changeDetectorRef.detectChanges();
+  }
+
+  onChipsDeleted(event) {
+    // run change detector
+    this.changeDetectorRef.detectChanges();
   }
 }

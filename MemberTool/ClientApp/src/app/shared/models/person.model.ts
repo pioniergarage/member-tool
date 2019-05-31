@@ -1,4 +1,4 @@
-import {PGRole} from './pg-role.model';
+import { PGRole } from './pg-role.model';
 
 export interface Person {
 
@@ -12,4 +12,6 @@ export interface Person {
   email: string;
   description: string;
   linkedIn: string;
+
+  // ToDo: answers are note used yet
 }
