@@ -1,24 +1,22 @@
-<div style="margin-bottom: 10px" class="row">
-  <form class="col s12">
-    <div class="row">
-      <div class="col s12">
-        <mz-chip-input
-          [placeholder]="'Search ...'"
-          [secondaryPlaceholder]="' + Tag'"
-          [(ngModel)]="searchChips"
-          name="searchInput"
-          (add)="onChipsAdded($event)"
-          (delete)="onChipsDeleted($event)"
-        >
-        </mz-chip-input>
-      </div>
+<form class="col s12">
+  <div class="row" style="margin-top: 20px; margin-bottom: 0px;">
+    <div class="col s12">
+      <mz-chip-input
+        [placeholder]="'Search ...'"
+        [secondaryPlaceholder]="' + Tag'"
+        [(ngModel)]="searchChips"
+        name="searchInput"
+        (add)="onChipsAdded($event)"
+        (delete)="onChipsDeleted($event)"
+      >
+      </mz-chip-input>
     </div>
-  </form>
-</div>
+  </div>
+</form>
 
 <div class="row">
   <div *ngIf="persons | personFilterPipe: searchChips; let filteredPersons">
-    <div *ngFor="let person of filteredPersons" class="col s12 m6 l4">
+    <div *ngFor="let person of filteredPersons" class="col s12 m6 l4 xl3">
       <div class="card hoverable pg-card">
         <div class="pg-card-header" [ngStyle]="getPersonStatus(person)">
           <div class="pg-card-header-box">
