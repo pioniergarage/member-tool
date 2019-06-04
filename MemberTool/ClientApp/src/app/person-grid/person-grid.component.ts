@@ -41,16 +41,12 @@ export class PersonGridComponent implements OnInit, OnDestroy {
     this.subscriptions.forEach(sub => sub.unsubscribe());
   }
 
-  // ToDo delete for new design
+  // method changes card color due to the current status of the member
   getPersonStatus(person: Person) {
-
-    // opacity value
-    const opacity = 0.7;
 
     if (person.currentPGRole.name.toLowerCase() === 'alumnus') {
       return {
-        '-webkit-filter': `opacity(${opacity})`,
-        filter: `opacity(${opacity})`
+        background: 'linear-gradient(90deg, #005258 0%, rgba(0, 82, 88, 0.5) 100%)'
       };
     }
   }

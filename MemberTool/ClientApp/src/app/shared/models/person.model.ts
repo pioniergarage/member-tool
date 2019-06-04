@@ -1,4 +1,5 @@
 import { PGRole } from './pg-role.model';
+import { Project } from './project.model';
 
 export interface Person {
 
@@ -7,11 +8,13 @@ export interface Person {
   currentPGRole: PGRole;
   memberSince: string;
   userImgPath: string;
-  backgroundImgPath: string;
+  // backgroundImgPath: string; // no longer necessary
+  currentProjects: Project[];
   pgRoles: PGRole[];
   email: string;
   description: string;
   linkedIn: string;
+  location: string;
 
-  // ToDo: answers are note used yet
+  // ToDo: answers are not used yet
 }

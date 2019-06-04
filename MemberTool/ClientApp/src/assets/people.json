@@ -13,6 +13,10 @@
       {
         "name": "Sales Member",
         "id": "17"
+      },
+      {
+        "name": "Event Member",
+        "id": "777"
       }
     ],
     "memberSince": "2016-04-12T12:14:37.014Z",
@@ -32,7 +36,26 @@
       }
     ],
     "id": "77",
-    "status": "active"
+    "currentProjects": [
+      {
+        "id": 1,
+        "name": "Member Tool",
+        "url": "https://github.com/pioniergarage/member-tool"
+      },
+      {
+        "id": 2,
+        "name": "DSGVO"
+      },
+      {
+        "id": 3,
+        "name": "Turtle App"
+      },
+      {
+        "id": 4,
+        "name": "some other staff"
+      }
+    ],
+    "location": "Karlsruhe"
   },
   {
     "name": "Dominic Seitz",
@@ -58,7 +81,7 @@
         "id": "110"
       }
     ],
-    "memberSince": "2016-04-12T12:14:37.014Z",
+    "memberSince": "2019-04-12T12:14:37.014Z",
     "userImgPath": "https://pioniergarage.de/wp-content/uploads/PG-Team-40-1.jpg",
     "backgroundImgPath": "https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg",
     "email": "gustav.gans@pioniergarage.de",
@@ -74,7 +97,6 @@
         "id": "109"
       }
     ],
-    "id": "78",
-    "status": "inactive"
+    "id": "78"
   }
 ]

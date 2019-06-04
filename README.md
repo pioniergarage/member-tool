@@ -1,6 +1,6 @@
 # PG Member Tool
 
-This project was generated and built with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1. and [ASP.NET Core] (https://github.com/aspnet/Home) version 2.0. 
+This project was generated and built with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1. and [ASP.NET Core](https://github.com/aspnet/Home) version 2.0.
 
 ## Description
 
@@ -14,7 +14,7 @@ Swagger has been configured for the server API under `http://localhost:18008/swa
 
 ## Build
 
-Run `ng build` inside `MemberTool/ClientApp` to build the Angular project. The build artifacts will be stored in the `MemberTool/wwwroot` directory. Use the `-prod` flag for a production build.
+Run `ng build` inside `MemberTool/ClientApp` to build the Angular project. The build artifacts will be stored in the `MemberTool/wwwroot` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
