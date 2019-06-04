@@ -1,7 +1,3 @@
-.pg-card {
-  height: 400px;
-  // height: 500px; // with blockquote
-}
 .pg-card-image img {
   height: 200px;
   object-fit: cover;
@@ -47,9 +43,83 @@
   text-align: center;
   margin-right: 1rem;
 }
-.pg-card-content {
-  padding: 0rem 0.5rem 1rem 0.5rem;
-}
+
 .card-reveal-list li {
   list-style: disc inside;
+}
+
+/*********************/
+/**** new pg card ****/
+/*********************/
+.pg-card {
+  height: 500px;
+  background: linear-gradient(90deg, #f2f2f2 0%, #ffffff 33%);
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+}
+.pg-card-header {
+  height: 180px;
+  background: linear-gradient(90deg, #b31819 0%, rgba(179, 24, 25, 0.75) 100%);
+  border-radius: 20px 20px 0px 50px;
+  -moz-border-radius: 20px 20px 0px 50px;
+  -webkit-border-radius: 20px 20px 0px 50px;
+
+  .pg-card-header-box {
+    height: 100%;
+    padding: 40px 30px;
+
+    .pg-header-img {
+      width: 30%;
+      height: 100%;
+      float: left;
+      border-radius: 25px;
+      -moz-border-radius: 25px;
+      -webkit-border-radius: 25px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .pg-header-box {
+      width: 67%;
+      padding: 10px 20px;
+      height: 100%;
+      float: left;
+
+      .pg-header-1 {
+        font-size: 24px;
+        line-height: 28px;
+        color: #ffffff;
+        margin-bottom: 6px;
+
+        .bold {
+          font-weight: bold;
+        }
+      }
+      .pg-header-2 {
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 4px;
+        color: rgba(255, 253, 253, 0.6);
+      }
+      .pg-header-social {
+        color: #ffffff;
+
+        i {
+          float: left;
+        }
+
+        .linkedin-icon {
+          height: 24px;
+          width: 24px;
+          padding: 3px;
+          float: left;
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+}
+.pg-card-content {
+  height: 320px;
 }
