@@ -108,18 +108,57 @@
         i {
           float: left;
         }
-
-        .linkedin-icon {
-          height: 24px;
-          width: 24px;
-          padding: 3px;
-          float: left;
-          margin-left: 2px;
-        }
       }
     }
   }
 }
+
+.svg-icon {
+  height: 24px;
+  width: 24px;
+  padding: 3px;
+  float: left;
+  margin-left: 2px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
 .pg-card-content {
   height: 320px;
+  padding: 20px 30px;
+
+  ul.pg-card-property-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+
+    li {
+      i {
+        margin-right: 1rem;
+        float: left;
+      }
+
+      .svg-icon {
+        margin-right: 1rem;
+        float: left;
+      }
+
+      .property-box {
+        float: left;
+
+        .property-heading {
+          font-weight: bold;
+          font-size: 16px;
+          display: flex;
+          padding-bottom: 0.5rem;
+        }
+
+        .property-content {
+          padding-bottom: 1rem;
+        }
+      }
+    }
+  }
 }
