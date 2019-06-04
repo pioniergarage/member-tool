@@ -105,8 +105,12 @@
       .pg-header-social {
         color: #ffffff;
 
-        i {
-          float: left;
+        a {
+          color: #ffffff;
+
+          i {
+            float: left;
+          }
         }
       }
     }
@@ -152,11 +156,23 @@
           font-weight: bold;
           font-size: 16px;
           display: flex;
-          padding-bottom: 0.5rem;
+          padding-bottom: 0.15rem;
         }
 
         .property-content {
-          padding-bottom: 1rem;
+          padding-bottom: 0.8rem;
+
+          ul li {
+            margin-bottom: 0.15rem;
+
+            a {
+              color: rgba(0, 0, 0, 0.87);
+            }
+
+            a:hover {
+              color: #b31819;
+            }
+          }
         }
       }
     }

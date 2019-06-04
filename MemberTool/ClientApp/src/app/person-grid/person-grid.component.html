@@ -19,65 +19,104 @@
 <div class="row">
   <div *ngIf="persons | personFilterPipe: searchChips; let filteredPersons">
     <div *ngFor="let person of filteredPersons" class="col s12 m6 l4">
-      <div class="card hoverable pg-card" [ngStyle]="getPersonStatus(person)">
-        <div class="card-image pg-card-image">
-          <img [src]="person.backgroundImgPath" />
-          <a
-            #openingElement
-            class="btn-floating halfway-fab pg-red pg-btn hoverable activator"
-          >
-            <i class="material-icons">more_vert</i>
-          </a>
+      <div class="card hoverable pg-card">
+        <div class="pg-card-header" [ngStyle]="getPersonStatus(person)">
+          <div class="pg-card-header-box">
+            <div
+              class="pg-header-img"
+              [style.background-image]="'url(' + person.userImgPath + ')'"
+            ></div>
+            <div class="pg-header-box">
+              <div class="pg-header-1">
+                <span class="bold">{{ person.name.split(" ")[0] }}</span
+                >&nbsp;{{ person.name.split(" ")[1] }}
+              </div>
+              <div class="pg-header-2">{{ person.currentPGRole.name }}</div>
+              <div class="pg-header-social">
+                <a
+                  *ngIf="person.email"
+                  [href]="'mailto:' + person.email"
+                  target="_blank"
+                >
+                  <i class="material-icons">mail</i>
+                </a>
+                <a
+                  *ngIf="person.linkedIn"
+                  [href]="person.linkedIn"
+                  target="_blank"
+                >
+                  <div class="svg-icon">
+                    <img
+                      src="assets/img/linkedin_logo.svg"
+                      alt="LinkedIn-Logo"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="user-image">
-          <img [src]="person.userImgPath" alt="header-1" />
-        </div>
-        <div class="card-content">
-          <span class="card-title center-align">{{ person.name }}</span>
-          <span class="card-sub-title center-align grey-text">{{
-            person.currentPGRole.name
-          }}</span>
-          <!-- <blockquote class="pg-red-blockquote blockquote-lighten-2">
-            {{ person.description | slice: 0:140 }}
-          </blockquote> -->
-        </div>
-        <div #cardReveal class="card-reveal">
-          <span #closingElement class="card-title grey-text text-darken-4">
-            {{ person.name }}
-            <i class="material-icons right">close</i>
-          </span>
-          <ul>
-            <li class="pg-card-subheading">
-              <i class="material-icons">today</i>Mitglied seit
+        <div class="pg-card-content">
+          <ul class="pg-card-property-list">
+            <li *ngIf="person.currentProjects">
+              <div class="svg-icon">
+                <img src="assets/img/start-up.svg" alt="Rocket-Icon" />
+              </div>
+              <div class="property-box">
+                <div class="property-heading">Current Projects</div>
+                <div class="property-content">
+                  <ul>
+                    <li
+                      *ngFor="
+                        let project of person.currentProjects;
+                        let i = index
+                      "
+                    >
+                      <ng-container *ngIf="i < 2">
+                        <a
+                          *ngIf="project.url; else projectName"
+                          [href]="project.url"
+                        >
+                          {{ project.name }}
+                        </a>
+                        <ng-template #projectName>{{
+                          project.name
+                        }}</ng-template>
+                      </ng-container>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </li>
-            <li class="pg-card-content">
-              {{ person.memberSince }}
+            <li *ngIf="person.location">
+              <i class="material-icons">location_on</i>
+              <div class="property-box">
+                <div class="property-heading">Location</div>
+                <div class="property-content">{{ person.location }}</div>
+              </div>
             </li>
-            <li class="list-separator"></li>
-            <li class="pg-card-subheading">
-              <i class="material-icons">supervisor_account</i>Bisherige
-              Positionen in der PG
+            <li>
+              <i class="material-icons">supervisor_account</i>
+              <div class="property-box">
+                <div class="property-heading">Previous Roles</div>
+                <div class="property-content">
+                  <ul>
+                    <li *ngFor="let role of person.pgRoles; let i = index">
+                      <ng-container *ngIf="i < 2">
+                        {{ role.name }}
+                      </ng-container>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </li>
-            <li class="pg-card-content">
-              <ul class="card-reveal-list">
-                <li *ngFor="let role of person.pgRoles">{{ role.name }}</li>
-              </ul>
+            <li *ngIf="person.memberSince">
+              <i class="material-icons">today</i>
+              <div class="property-box">
+                <div class="property-heading">Member Since</div>
+                <div class="property-content">{{ person.memberSince }}</div>
+              </div>
             </li>
-            <li class="list-separator"></li>
-            <a
-              *ngIf="person.email"
-              [href]="'mailto:' + person.email"
-              target="_blank"
-            >
-              <li style="color: rgba(0,0,0,0.87);" class="pg-card-subheading">
-                <i class="material-icons">mail</i>Mail
-              </li>
-            </a>
-            <a *ngIf="person.linkedIn" [href]="person.linkedIn" target="_blank">
-              <li style="color: rgba(0,0,0,0.87);" class="pg-card-subheading">
-                <i class="material-icons">account_box</i>LinkedIn
-              </li>
-            </a>
           </ul>
         </div>
       </div>
@@ -89,71 +128,6 @@
     >
       <i class="large material-icons">highlight_off</i>
       <h4>something went wrong</h4>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col s12 m6">
-    <div class="card hoverable pg-card">
-      <div class="pg-card-header">
-        <div class="pg-card-header-box">
-          <div
-            class="pg-header-img"
-            [style.background-image]="
-              'url(' +
-              'https://pioniergarage.de/wp-content/uploads/PG-Team-40-1.jpg' +
-              ')'
-            "
-          ></div>
-          <div class="pg-header-box">
-            <div class="pg-header-1">
-              <span class="bold">Dominic</span> Seitz
-            </div>
-            <div class="pg-header-2">Head of Sales</div>
-            <div class="pg-header-social">
-              <i class="material-icons" style="float: left;">mail</i>
-              <div class="svg-icon">
-                <img src="assets/img/linkedin_logo.svg" alt="LinkedIn-Logo" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="pg-card-content">
-        <ul class="pg-card-property-list">
-          <li>
-            <div class="svg-icon">
-              <img src="assets/img/start-up.svg" alt="Rocket-Icon" />
-            </div>
-            <div class="property-box">
-              <div class="property-heading">Current Projects</div>
-              <div class="property-content">Member Tool</div>
-            </div>
-          </li>
-          <li>
-            <i class="material-icons">location_on</i>
-            <div class="property-box">
-              <div class="property-heading">Location</div>
-              <div class="property-content">Karlsruhe</div>
-            </div>
-          </li>
-          <li>
-            <i class="material-icons">supervisor_account</i>
-            <div class="property-box">
-              <div class="property-heading">Previous Roles</div>
-              <div class="property-content">Member Launchpad-Ressort</div>
-            </div>
-          </li>
-          <li>
-            <i class="material-icons">today</i>
-            <div class="property-box">
-              <div class="property-heading">Member Since</div>
-              <div class="property-content">06 / 2016</div>
-            </div>
-          </li>
-        </ul>
-      </div>
     </div>
   </div>
 </div>
