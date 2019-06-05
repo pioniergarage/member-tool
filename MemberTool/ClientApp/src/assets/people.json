@@ -98,5 +98,89 @@
       }
     ],
     "id": "78"
+  },
+  {
+    "name": "Dominic Seitz",
+    "currentPGRole": {
+      "name": "Alumnus",
+      "id": "100"
+    },
+    "pgRoles": [
+      {
+        "name": "Head of Sales",
+        "id": "23"
+      },
+      {
+        "name": "Sales Member",
+        "id": "17"
+      },
+      {
+        "name": "Alumnus",
+        "id": "100"
+      },
+      {
+        "name": "Launchpad Member",
+        "id": "110"
+      }
+    ],
+    "memberSince": "2019-04-12T12:14:37.014Z",
+    "userImgPath": "https://pioniergarage.de/wp-content/uploads/PG-Team-40-1.jpg",
+    "backgroundImgPath": "https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg",
+    "email": "gustav.gans@pioniergarage.de",
+    "description": "Das ist der liebe Gustav. Den ham alle lieb",
+    "linkedIn": "http://example.org",
+    "answers": [
+      {
+        "question": {
+          "questionString": "Welches Startup gefällt dir am besten?",
+          "id": "55"
+        },
+        "answer": "Wer wenn nicht Lackey",
+        "id": "109"
+      }
+    ],
+    "id": "78"
+  },
+  {
+    "name": "Dominic Seitz",
+    "currentPGRole": {
+      "name": "Alumnus",
+      "id": "100"
+    },
+    "pgRoles": [
+      {
+        "name": "Head of Sales",
+        "id": "23"
+      },
+      {
+        "name": "Sales Member",
+        "id": "17"
+      },
+      {
+        "name": "Alumnus",
+        "id": "100"
+      },
+      {
+        "name": "Launchpad Member",
+        "id": "110"
+      }
+    ],
+    "memberSince": "2019-04-12T12:14:37.014Z",
+    "userImgPath": "https://pioniergarage.de/wp-content/uploads/PG-Team-40-1.jpg",
+    "backgroundImgPath": "https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg",
+    "email": "gustav.gans@pioniergarage.de",
+    "description": "Das ist der liebe Gustav. Den ham alle lieb",
+    "linkedIn": "http://example.org",
+    "answers": [
+      {
+        "question": {
+          "questionString": "Welches Startup gefällt dir am besten?",
+          "id": "55"
+        },
+        "answer": "Wer wenn nicht Lackey",
+        "id": "109"
+      }
+    ],
+    "id": "78"
   }
 ]

@@ -15,7 +15,9 @@
 </form>
 
 <div class="row">
-  <div *ngIf="persons | personFilterPipe: searchChips; let filteredPersons">
+  <ng-container
+    *ngIf="persons | personFilterPipe: searchChips; let filteredPersons"
+  >
     <div *ngFor="let person of filteredPersons" class="col s12 m6 l4 xl3">
       <div class="card hoverable pg-card">
         <div class="pg-card-header" [ngStyle]="getPersonStatus(person)">
@@ -127,5 +129,5 @@
       <i class="large material-icons">highlight_off</i>
       <h4>something went wrong</h4>
     </div>
-  </div>
+  </ng-container>
 </div>
