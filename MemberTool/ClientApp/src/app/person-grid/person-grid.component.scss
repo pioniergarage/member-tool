@@ -52,14 +52,14 @@
 /**** new pg card ****/
 /*********************/
 .pg-card {
-  height: 500px;
+  height: 480px;
   background: linear-gradient(90deg, #f2f2f2 0%, #ffffff 33%);
   border-radius: 20px;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
 }
 .pg-card-header {
-  height: 180px;
+  height: 160px;
   background: linear-gradient(90deg, #b31819 0%, rgba(179, 24, 25, 0.75) 100%);
   border-radius: 20px 20px 0px 50px;
   -moz-border-radius: 20px 20px 0px 50px;
@@ -67,7 +67,7 @@
 
   .pg-card-header-box {
     height: 100%;
-    padding: 40px 30px;
+    padding: 30px 20px;
 
     .pg-header-img {
       width: 30%;
@@ -81,8 +81,9 @@
     }
 
     .pg-header-box {
-      width: 67%;
-      padding: 10px 20px;
+      width: 66%;
+      padding: 10px 0px;
+      margin-left: 4%;
       height: 100%;
       float: left;
 
@@ -131,7 +132,7 @@
 }
 .pg-card-content {
   height: 320px;
-  padding: 20px 30px;
+  padding: 20px 20px;
 
   ul.pg-card-property-list {
     display: flex;
