@@ -8,13 +8,9 @@ export interface Person {
   currentPGRole: PGRole;
   memberSince: string;
   userImgPath: string;
-  // backgroundImgPath: string; // no longer necessary
   currentProjects: Project[];
   pgRoles: PGRole[];
   email: string;
-  description: string;
   linkedIn: string;
   location: string;
-
-  // ToDo: answers are not used yet
 }

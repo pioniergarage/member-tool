@@ -14,7 +14,7 @@ export class PersonService {
   constructor(private http: HttpClient) { }
 
   getPersons(): Observable<Person[]> {
-    return this.http.get<Person[]>('assets/people.json')
+    return this.http.get<Person[]>(`${this.API_URL}`)
       .pipe(
         // modify date format
         map((persons: Person[]) => {

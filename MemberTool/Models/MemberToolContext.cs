@@ -15,8 +15,7 @@ namespace MemberTool.Models
         
         public DbSet<Person> Persons { get; set; }
         public DbSet<PGRole> Roles { get; set; }
-        public DbSet<Question> Questions { get; set; }
-        public DbSet<QuestionAnswer> Answers { get; set; }
+        public DbSet<CurrentProject> CurrentProjects { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

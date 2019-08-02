@@ -11,8 +11,7 @@ namespace MemberTool.Models
             return query
                 .Include(p => p.CurrentPGRole)
                 .Include(p => p.PGRoles)
-                .Include(p => p.Answers)
-                .ThenInclude(a => a.Question);
+                .Include(p => p.CurrentProjects);
         }
     }
 }
