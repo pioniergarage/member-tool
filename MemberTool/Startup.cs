@@ -113,36 +113,47 @@ namespace MemberTool
                 Id = "17",
                 Name = "Sales Member"
             };
+            var role3 = new PGRole
+            {
+                Id = "18",
+                Name = "Alumnus"
+            };
+
+            var project1 = new CurrentProject{
+                Id = 1,
+                Name = "Member Tool",
+                Url = "https://github.com/pioniergarage/member-tool"
+            };
+            var project2 = new CurrentProject{
+                Id = 2,
+                Name = "DSGVO"
+            }:
 
             context.Persons.Add(new Person
             {
                 Id = "77",
                 Name = "Gustav Gans",
                 CurrentPGRole = role1,
-                PGRoles = new List<PGRole>{ role1, role2 },
                 MemberSince = new DateTime(2016, 04, 12, 12, 14, 37),
+                UserImgPath = "https://pioniergarage.de/wp-content/uploads/PG-Team-40-1.jpg",
+                CurrentProjects = new List<CurrentProject>{ project1, project2 },
+                PGRoles = new List<PGRole>{ role1, role2 },
                 Email = "gustav.gans@pioniergarage.de",
-                Description = "Das ist der liebe Gustav. Den ham alle lieb",
-                Answers = new List<QuestionAnswer>{ new QuestionAnswer
-                {
-                    Id = "109", 
-                    Answer = "Wer wenn nicht Lackey",
-                    Question = new Question
-                    {
-                        Id = "55",
-                        QuestionString = "Welches Startup gefällt dir am besten?"
-                    }
-                }},
+                LinkedIn = "http://example.org",
+                Location = "Karlsruhe"
             });
             context.Persons.Add(new Person
             {
                 Id = "111",
                 Name = "Franz Gans",
-                CurrentPGRole = role2,
-                PGRoles = new List<PGRole> { role2 },
+                CurrentPGRole = role3,
                 MemberSince = new DateTime(2018, 01, 23, 09, 50, 45),
+                UserImgPath = "https://pioniergarage.de/wp-content/uploads/PG-Team-40-1.jpg",
+                CurrentProjects = new List<CurrentProject>{ project1, project2 },
+                PGRoles = new List<PGRole>{ role2, role3 },
                 Email = "franz.gans@pioniergarage.de",
-                Description = "Der Franz ist auch noch da"
+                LinkedIn = "http://example.org",
+                Location = "Karlsruhe"
             });
 
             context.SaveChanges();
