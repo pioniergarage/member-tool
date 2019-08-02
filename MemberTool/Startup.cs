@@ -120,12 +120,12 @@ namespace MemberTool
             };
 
             var project1 = new CurrentProject{
-                Id = 1,
+                Id = "1",
                 Name = "Member Tool",
                 Url = "https://github.com/pioniergarage/member-tool"
             };
             var project2 = new CurrentProject{
-                Id = 2,
+                Id = "2",
                 Name = "DSGVO"
             };
 
