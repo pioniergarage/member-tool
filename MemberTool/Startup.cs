@@ -127,7 +127,7 @@ namespace MemberTool
             var project2 = new CurrentProject{
                 Id = 2,
                 Name = "DSGVO"
-            }:
+            };
 
             context.Persons.Add(new Person
             {
