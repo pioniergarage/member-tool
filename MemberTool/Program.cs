@@ -7,12 +7,11 @@ namespace MemberTool
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            BuildWebHostBuilder(args).Build().Run();
         }
 
-        public static IWebHost BuildWebHost(string[] args) =>
+        public static IWebHostBuilder BuildWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-                .Build();
+                .UseStartup<Startup>();
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using MemberTool.Models;
@@ -8,8 +9,11 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace MemberTool
@@ -27,9 +31,21 @@ namespace MemberTool
         public void ConfigureServices(IServiceCollection services)
         {
             services
-                .AddDbContext<MemberToolContext>(options => options
-                    .UseInMemoryDatabase("MemberTool")
-                )
+                .AddDbContext<MemberToolContext>(options =>
+                {
+                    var dbConnectionString = Environment.GetEnvironmentVariable("MYSQLCONNSTR_localdb");
+                    if (string.IsNullOrEmpty(dbConnectionString))
+                    {
+                        options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=member-tool;Trusted_Connection=True;MultipleActiveResultSets=true");
+                    }
+                    else
+                    {
+                        options.UseMySql(AzureMySqlHelper.ToMySQLStandard(dbConnectionString), mySqlOptions =>
+                       {
+                           mySqlOptions.ServerVersion(new Version(5, 7, 9), ServerType.MySql);
+                       });
+                    }
+                })
                 .AddMvc()
                 .AddJsonOptions(
                     options => options.SerializerSettings.ReferenceLoopHandling =
@@ -46,6 +62,7 @@ namespace MemberTool
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            Trace.TraceInformation("Start Configure");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -63,14 +80,14 @@ namespace MemberTool
                 // specifying the Swagger JSON endpoint.
                 app.UseSwaggerUI(c =>
                 {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "PG Member Tool v1");
+                    c.SwaggerEndpoint("/swagger/", "PG Member Tool v1");
                 });
 
                 // Fill with seed data
                 using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
                 {
                     var context = serviceScope.ServiceProvider.GetService<MemberToolContext>();
-                    context.Database.EnsureCreated();
+                    context.Database.Migrate();
                     EnsureSeedData(context);
                 }
             }
@@ -118,6 +135,8 @@ namespace MemberTool
                 Id = "18",
                 Name = "Alumnus"
             };
+            context.Roles.AddRange(role1, role2, role3);
+            context.SaveChanges();
 
             var project1 = new CurrentProject{
                 Id = "1",
@@ -128,6 +147,8 @@ namespace MemberTool
                 Id = "2",
                 Name = "DSGVO"
             };
+            context.CurrentProjects.AddRange(project1, project2);
+            context.SaveChanges();
 
             context.Persons.Add(new Person
             {
@@ -155,7 +176,6 @@ namespace MemberTool
                 LinkedIn = "http://example.org",
                 Location = "Karlsruhe"
             });
-
             context.SaveChanges();
         }
     }
