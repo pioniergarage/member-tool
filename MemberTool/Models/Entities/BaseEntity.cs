@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Newtonsoft.Json;
 
 namespace MemberTool.Models.Entities
@@ -7,6 +8,7 @@ namespace MemberTool.Models.Entities
     public class BaseEntity
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string Id { get; set; }
         
         [JsonIgnore]

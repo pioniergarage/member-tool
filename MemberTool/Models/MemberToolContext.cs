@@ -20,14 +20,9 @@ namespace MemberTool.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            foreach (var entityType in modelBuilder.Model.GetEntityTypes()
-                .Where(e => typeof(BaseEntity).IsAssignableFrom(e.ClrType)))
-            {
-                modelBuilder.Entity(entityType.ClrType)
-                    .HasIndex(nameof(BaseEntity.CreatedAt))
-                    .IsUnique()
-                    .ForSqlServerIsClustered();
-            }
+            modelBuilder.Entity<Person>().ToTable("Person");
+            modelBuilder.Entity<PGRole>().ToTable("Role");
+            modelBuilder.Entity<CurrentProject>().ToTable("Project");
         }
 
         public override int SaveChanges()
