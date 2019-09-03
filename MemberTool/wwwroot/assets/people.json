@@ -1,186 +1,744 @@
 [
   {
-    "name": "Gustav Gans",
-    "currentPGRole": {
-      "name": "Head of Sales",
-      "id": "23"
-    },
-    "pgRoles": [
-      {
-        "name": "Head of Sales",
-        "id": "23"
-      },
-      {
-        "name": "Sales Member",
-        "id": "17"
-      },
-      {
-        "name": "Event Member",
-        "id": "777"
-      }
-    ],
-    "memberSince": "2016-04-12T12:14:37.014Z",
+    "name": "Franz Gans",
+    "currentPGRole": { "name": "Alumnus", "id": "18" },
+    "memberSince": "2018-01-23T09:50:45",
     "userImgPath": "https://pioniergarage.de/wp-content/uploads/PG-Team-40-1.jpg",
-    "backgroundImgPath": "https://images.pexels.com/photos/73871/rocket-launch-rocket-take-off-nasa-73871.jpeg",
-    "email": "gustav.gans@pioniergarage.de",
-    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gub",
-    "linkedIn": null,
-    "answers": [
-      {
-        "question": {
-          "questionString": "Welches Startup gefällt dir am besten?",
-          "id": "55"
-        },
-        "answer": "Wer wenn nicht Lackey",
-        "id": "109"
-      }
-    ],
-    "id": "77",
     "currentProjects": [
       {
-        "id": 1,
         "name": "Member Tool",
-        "url": "https://github.com/pioniergarage/member-tool"
+        "url": "https://github.com/pioniergarage/member-tool",
+        "id": "1"
       },
-      {
-        "id": 2,
-        "name": "DSGVO"
-      },
-      {
-        "id": 3,
-        "name": "Turtle App"
-      },
-      {
-        "id": 4,
-        "name": "some other staff"
-      }
+      { "name": "DSGVO", "url": null, "id": "2" }
     ],
-    "location": "Karlsruhe"
+    "pgRoles": [
+      { "name": "Alumnus", "id": "18" },
+      { "name": "Sales Member", "id": "17" }
+    ],
+    "email": "franz.gans@pioniergarage.de",
+    "linkedIn": "http://example.org",
+    "location": "Karlsruhe",
+    "id": "111"
+  },
+  {
+    "name": "Jörn Kußmaul",
+    "currentPGRole": null,
+    "memberSince": "2018-11-11T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "jörn.kußmaul@pioniergarage.de",
+    "linkedIn": null,
+    "location": "",
+    "id": "1169"
+  },
+  {
+    "name": "Christian Wagner",
+    "currentPGRole": { "name": "Alumnus", "id": "18" },
+    "memberSince": "2015-11-11T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "christian.wagner@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "1218"
+  },
+  {
+    "name": "Lena Straub",
+    "currentPGRole": { "name": "Alumnus", "id": "18" },
+    "memberSince": "2018-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "lena.straub@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "1347"
+  },
+  {
+    "name": "Alexander Schlechter",
+    "currentPGRole": null,
+    "memberSince": "2019-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "alexander.schlechter@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "1350"
+  },
+  {
+    "name": "Ruben Furi",
+    "currentPGRole": null,
+    "memberSince": "2019-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "ruben.furi@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "1427"
+  },
+  {
+    "name": "Jan Effenberger",
+    "currentPGRole": null,
+    "memberSince": "2019-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "jan.effenberger@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "1539"
+  },
+  {
+    "name": "Jan Bode",
+    "currentPGRole": null,
+    "memberSince": "2018-12-12T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "jan.bode@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "1667"
+  },
+  {
+    "name": "Norbert Kozsir",
+    "currentPGRole": null,
+    "memberSince": "2018-01-01T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "norbert.kozsir@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "1779"
+  },
+  {
+    "name": "Philipp Meyer",
+    "currentPGRole": null,
+    "memberSince": "2019-01-01T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "philipp.meyer@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "182"
+  },
+  {
+    "name": "David Höglinger",
+    "currentPGRole": null,
+    "memberSince": "2018-12-12T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "david.höglinger@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "1957"
+  },
+  {
+    "name": "Elisabeth Goebel",
+    "currentPGRole": null,
+    "memberSince": "2019-06-06T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "elisa.goebel@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "1960"
+  },
+  {
+    "name": "Katharina Riesterer",
+    "currentPGRole": { "name": "Alumnus", "id": "18" },
+    "memberSince": "2018-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "katharina.riesterer@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Südkorea",
+    "id": "2135"
+  },
+  {
+    "name": "Joscha Eckert",
+    "currentPGRole": null,
+    "memberSince": "2018-01-01T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "joscha.eckert@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Neckarsulm",
+    "id": "2169"
+  },
+  {
+    "name": "Ilya Filippov",
+    "currentPGRole": null,
+    "memberSince": "2019-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "ilya.filippov@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "2271"
+  },
+  {
+    "name": "Patrick Golz",
+    "currentPGRole": { "name": "Alumnus", "id": "18" },
+    "memberSince": "2018-01-01T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "patrick.golz@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "2290"
+  },
+  {
+    "name": "Egor Spirin",
+    "currentPGRole": null,
+    "memberSince": "2018-12-12T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "egor.spirin@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Kirchheim unter Teck",
+    "id": "2346"
+  },
+  {
+    "name": "Felix Kuhn",
+    "currentPGRole": null,
+    "memberSince": "2019-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "felix.kuhn@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "2385"
+  },
+  {
+    "name": "Stephan Bohr",
+    "currentPGRole": null,
+    "memberSince": "2018-12-12T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "stephan.bohr@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "2602"
+  },
+  {
+    "name": "Simon Maier",
+    "currentPGRole": null,
+    "memberSince": "2018-01-01T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "simon.maier@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "3094"
+  },
+  {
+    "name": "Jasmin Riedel",
+    "currentPGRole": null,
+    "memberSince": "2017-06-06T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "jasmin.riedel@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "3209"
+  },
+  {
+    "name": "Jörg Remer",
+    "currentPGRole": null,
+    "memberSince": "2019-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "jörg.remer@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "3514"
+  },
+  {
+    "name": "Dominik Doerner",
+    "currentPGRole": null,
+    "memberSince": "2017-06-06T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "dominik.doerner@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "3518"
+  },
+  {
+    "name": "Rafael Stein-Lenzi",
+    "currentPGRole": null,
+    "memberSince": "2019-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "rafael.stein-lenzi@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "3521"
+  },
+  {
+    "name": "Leon Knauer",
+    "currentPGRole": null,
+    "memberSince": "2018-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "leon.knauer@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "3925"
+  },
+  {
+    "name": "Benjamin Bailer",
+    "currentPGRole": null,
+    "memberSince": "2018-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "benjamin.bailer@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "4330"
+  },
+  {
+    "name": "Max Schaeufele",
+    "currentPGRole": null,
+    "memberSince": "2019-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "max.schaeufele@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "4393"
+  },
+  {
+    "name": "Nico Kayser",
+    "currentPGRole": null,
+    "memberSince": "2019-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "nico.kayser@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Meckenbeuren",
+    "id": "5360"
+  },
+  {
+    "name": "Gil Talebian",
+    "currentPGRole": { "name": "Alumnus", "id": "18" },
+    "memberSince": "2018-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "gil.talebian@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Hong Kong",
+    "id": "5368"
+  },
+  {
+    "name": "Mattis Bodynek",
+    "currentPGRole": null,
+    "memberSince": "2018-12-12T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "mattis.bodynek@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "5373"
+  },
+  {
+    "name": "Marvin Wach",
+    "currentPGRole": null,
+    "memberSince": "2018-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "marvin.wach@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "5483"
+  },
+  {
+    "name": "Reyhan Duezguen",
+    "currentPGRole": null,
+    "memberSince": "2018-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "reyhan.duezguen@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "5544"
+  },
+  {
+    "name": "Alexander Kaiser",
+    "currentPGRole": { "name": "Alumnus", "id": "18" },
+    "memberSince": "2014-01-01T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "alexander.kaiser@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "5715"
+  },
+  {
+    "name": "Farah Perez",
+    "currentPGRole": null,
+    "memberSince": "2018-12-12T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "farah.perez@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "5761"
+  },
+  {
+    "name": "Sebastian Kleim",
+    "currentPGRole": null,
+    "memberSince": "2018-01-01T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "sebastian.kleim@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "6013"
+  },
+  {
+    "name": "Sean Kress",
+    "currentPGRole": null,
+    "memberSince": "2019-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "sean.kress@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "6471"
+  },
+  {
+    "name": "Christian Wiegand",
+    "currentPGRole": null,
+    "memberSince": "2017-05-05T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "christian.wiegand@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "6913"
+  },
+  {
+    "name": "Achim Krippner",
+    "currentPGRole": null,
+    "memberSince": "2018-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "achim.krippner@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "7286"
+  },
+  {
+    "name": "Dominik Tils",
+    "currentPGRole": null,
+    "memberSince": "2019-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "dominik.tils@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "7307"
+  },
+  {
+    "name": "Vito Dierksen",
+    "currentPGRole": null,
+    "memberSince": "2018-01-01T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "vito.dierksen@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "7334"
+  },
+  {
+    "name": "Tobias Ohlsson",
+    "currentPGRole": { "name": "Alumnus", "id": "18" },
+    "memberSince": "2018-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "tobias.ohlsson@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Indien",
+    "id": "7570"
+  },
+  {
+    "name": "Hendrik Behling",
+    "currentPGRole": null,
+    "memberSince": "2018-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "hendrik.behling@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "7668"
+  },
+  {
+    "name": "Gustav Gans",
+    "currentPGRole": { "name": "Head of Sales", "id": "23" },
+    "memberSince": "2016-04-12T12:14:37",
+    "userImgPath": "https://pioniergarage.de/wp-content/uploads/PG-Team-40-1.jpg",
+    "currentProjects": [],
+    "pgRoles": [{ "name": "Head of Sales", "id": "23" }],
+    "email": "gustav.gans@pioniergarage.de",
+    "linkedIn": "http://example.org",
+    "location": "Karlsruhe",
+    "id": "77"
+  },
+  {
+    "name": "Maximilian Knoll",
+    "currentPGRole": null,
+    "memberSince": "2018-12-12T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "maximilian.knoll@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "7764"
+  },
+  {
+    "name": "Jan Dorn",
+    "currentPGRole": null,
+    "memberSince": "2019-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "jan.dorn@pioniergarage.de",
+    "linkedIn": null,
+    "location": "",
+    "id": "781"
   },
   {
     "name": "Dominic Seitz",
-    "currentPGRole": {
-      "name": "Alumnus",
-      "id": "100"
-    },
-    "pgRoles": [
-      {
-        "name": "Head of Sales",
-        "id": "23"
-      },
-      {
-        "name": "Sales Member",
-        "id": "17"
-      },
-      {
-        "name": "Alumnus",
-        "id": "100"
-      },
-      {
-        "name": "Launchpad Member",
-        "id": "110"
-      }
-    ],
-    "memberSince": "2019-04-12T12:14:37.014Z",
-    "userImgPath": "https://pioniergarage.de/wp-content/uploads/PG-Team-40-1.jpg",
-    "backgroundImgPath": "https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg",
-    "email": "gustav.gans@pioniergarage.de",
-    "description": "Das ist der liebe Gustav. Den ham alle lieb",
-    "linkedIn": "http://example.org",
-    "answers": [
-      {
-        "question": {
-          "questionString": "Welches Startup gefällt dir am besten?",
-          "id": "55"
-        },
-        "answer": "Wer wenn nicht Lackey",
-        "id": "109"
-      }
-    ],
-    "id": "78"
+    "currentPGRole": null,
+    "memberSince": "2017-11-11T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "dominic.seitz@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "7865"
   },
   {
-    "name": "Dominic Seitz",
-    "currentPGRole": {
-      "name": "Alumnus",
-      "id": "100"
-    },
-    "pgRoles": [
-      {
-        "name": "Head of Sales",
-        "id": "23"
-      },
-      {
-        "name": "Sales Member",
-        "id": "17"
-      },
-      {
-        "name": "Alumnus",
-        "id": "100"
-      },
-      {
-        "name": "Launchpad Member",
-        "id": "110"
-      }
-    ],
-    "memberSince": "2019-04-12T12:14:37.014Z",
-    "userImgPath": "https://pioniergarage.de/wp-content/uploads/PG-Team-40-1.jpg",
-    "backgroundImgPath": "https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg",
-    "email": "gustav.gans@pioniergarage.de",
-    "description": "Das ist der liebe Gustav. Den ham alle lieb",
-    "linkedIn": "http://example.org",
-    "answers": [
-      {
-        "question": {
-          "questionString": "Welches Startup gefällt dir am besten?",
-          "id": "55"
-        },
-        "answer": "Wer wenn nicht Lackey",
-        "id": "109"
-      }
-    ],
-    "id": "78"
+    "name": "Jannik Nefferdorf",
+    "currentPGRole": null,
+    "memberSince": "2017-05-05T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "jannik.nefferdorf@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "809"
   },
   {
-    "name": "Dominic Seitz",
-    "currentPGRole": {
-      "name": "Alumnus",
-      "id": "100"
-    },
-    "pgRoles": [
-      {
-        "name": "Head of Sales",
-        "id": "23"
-      },
-      {
-        "name": "Sales Member",
-        "id": "17"
-      },
-      {
-        "name": "Alumnus",
-        "id": "100"
-      },
-      {
-        "name": "Launchpad Member",
-        "id": "110"
-      }
-    ],
-    "memberSince": "2019-04-12T12:14:37.014Z",
-    "userImgPath": "https://pioniergarage.de/wp-content/uploads/PG-Team-40-1.jpg",
-    "backgroundImgPath": "https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg",
-    "email": "gustav.gans@pioniergarage.de",
-    "description": "Das ist der liebe Gustav. Den ham alle lieb",
-    "linkedIn": "http://example.org",
-    "answers": [
-      {
-        "question": {
-          "questionString": "Welches Startup gefällt dir am besten?",
-          "id": "55"
-        },
-        "answer": "Wer wenn nicht Lackey",
-        "id": "109"
-      }
-    ],
-    "id": "78"
+    "name": "Aayush Thapak",
+    "currentPGRole": { "name": "Alumnus", "id": "18" },
+    "memberSince": "2018-01-01T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "aayush.thapak@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "8670"
+  },
+  {
+    "name": "Marcus Maddock",
+    "currentPGRole": null,
+    "memberSince": "2019-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "marcus.maddock@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "8836"
+  },
+  {
+    "name": "Carolin Baltzer",
+    "currentPGRole": null,
+    "memberSince": "2018-12-12T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "carolin.baltzer@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "9112"
+  },
+  {
+    "name": "Michael Frank",
+    "currentPGRole": null,
+    "memberSince": "2019-06-06T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "michael.frank@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "9152"
+  },
+  {
+    "name": "Johannes Galenzowski",
+    "currentPGRole": null,
+    "memberSince": "2019-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "johannes.galenzowski@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "9191"
+  },
+  {
+    "name": "Jonas Kirner",
+    "currentPGRole": null,
+    "memberSince": "2018-12-12T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "jonas.kirner@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "953"
+  },
+  {
+    "name": "Tobias Budig",
+    "currentPGRole": null,
+    "memberSince": "2018-12-12T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "tobias.budig@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "9617"
+  },
+  {
+    "name": "Antonia Lorenz",
+    "currentPGRole": null,
+    "memberSince": "2018-01-01T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "antonia.lorenz@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "9656"
+  },
+  {
+    "name": "Kevin Kraus",
+    "currentPGRole": null,
+    "memberSince": "2018-12-12T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "kevin.kraus@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "9667"
+  },
+  {
+    "name": "Dominik Kogel",
+    "currentPGRole": null,
+    "memberSince": "2018-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "dominik.kogel@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "9691"
+  },
+  {
+    "name": "Dominik Schreiber",
+    "currentPGRole": { "name": "Alumnus", "id": "18" },
+    "memberSince": "2014-11-11T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "dominik.schreiber@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "9693"
+  },
+  {
+    "name": "Nicola Lorenz",
+    "currentPGRole": null,
+    "memberSince": "2019-06-06T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "nicola.lorenz@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "9781"
+  },
+  {
+    "name": "Martin Bartos",
+    "currentPGRole": null,
+    "memberSince": "2019-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "martin.bartos@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Pforzheim",
+    "id": "9895"
+  },
+  {
+    "name": "Han Völker",
+    "currentPGRole": null,
+    "memberSince": "2019-07-07T00:00:00",
+    "userImgPath": null,
+    "currentProjects": [],
+    "pgRoles": [],
+    "email": "han.völker@pioniergarage.de",
+    "linkedIn": null,
+    "location": "Karlsruhe",
+    "id": "9905"
   }
 ]
