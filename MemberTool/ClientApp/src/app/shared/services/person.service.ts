@@ -35,6 +35,21 @@ export class PersonService {
 
             return person;
           });
+        }),
+        map((persons: Person[]) => {
+          return persons.map((person: Person) => {
+
+            // handle null values
+            if (person.currentPGRole === null || !person.currentPGRole) {
+              person.currentPGRole = { name: 'Alumnus', id: -1 };
+            }
+
+            if (person.userImgPath === null || !person.userImgPath) {
+              person.userImgPath = 'assets/img/person-placeholder.svg';
+            }
+
+            return person;
+          });
         })
       );
   }
